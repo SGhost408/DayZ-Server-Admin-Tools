@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Admin Tools (Offline)</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">DayZ Labs</a>
+      <button class="navbar-toggler" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+    </div>
+  </nav>
+
+  <header class="bg-light py-5 mb-4 text-center">
+    <div class="container">
+      <h1 class="fw-bold">Server Admin Tools</h1>
+      <p class="text-muted">Quick utilities to manage and convert DayZ config files — runs 100% offline in your browser</p>
+    </div>
+  </header>
+
+  <main class="container mb-5" id="tools-view">
+    <h2 class="mb-3">Tools</h2>
+    <div class="row g-3" id="tools-grid">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="classnames" data-description="Extracts classnames from any types.xml file by entering them manually or uploading the file">
+          classnames
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="classtotypes" data-description="Converts classnames to types.xml format with custom adjustments for nominal, lifetime, etc.">
+          classtotypes
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="compare_events" data-description="Offline tool (implemented in this package).">
+          compare events
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="compare_types" data-description="Offline tool (implemented in this package).">
+          compare types
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="customtypes" data-description="Changes restock and lifetime of your types.xml items only.">
+          customtypes
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="extractor" data-description="Extracts vehicle and parts classnames from vehicles script.">
+          extractor
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="nominaladjuster" data-description="Adjusts nominal values only of your items from types.xml.">
+          nominaladjuster
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="object" data-description="Converts SpawnObject-style lines into a JSON array of placed objects (classname, position, yaw).">
+          object
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="playerspawn" data-description="Converts coordinate lists into a JSON array suitable for player spawn data.">
+          playerspawn
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="tierRemover" data-description="Completely removes tiers from given types.xml">
+          tierRemover
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="trader" data-description="Converts simple item/price lists into JSON you can adapt for trader configurations.">
+          trader
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="traderobjects" data-description="Convert trader objects (TraderObjects.txt) from Trader by Dr. Jones to TraderPlus (TraderPlusGeneralConfig.json) format.">
+          traderobjects
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="traderplus" data-description="Converts classnames to TraderPlus price config.">
+          traderplus
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="types" data-description="Converts nominal value only of your types.xml items.">
+          types
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="types_splitter" data-description="Offline tool (implemented in this package).">
+          types splitter
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="typesusagespecific" data-description="Adds or replaces usage entries for types.xml items (offline).">
+          typesusagespecific
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="vehicle_lifetime" data-description="Converts vanilla vehicle lifetime only to specified lifetime from your types.xml.">
+          vehicle lifetime
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="vehicleparts" data-description="Creates TraderPlus vehicle config for spawning vehicles with parts.">
+          vehicleparts
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="zeds" data-description="Converts coordinate lists into a JSON array of zombie spawn points.">
+          zeds
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="zeds2" data-description="Converts zombie zones for your mission file zombie territories.">
+          zeds2
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="zero_nominal_updater" data-description="Converts nominal value for entries with 0 with exclusions.">
+          zero nominal updater
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="tool-link btn btn-outline-primary w-100 py-3" data-tool="zmbTerritories" data-description="Adds dmin and dmax values to existing zombie spawns.">
+          zmbTerritories
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div class="container mb-5" id="tool-content-container" style="display:none;">
+    <div class="d-flex justify-content-between mb-3 gap-2">
+      <button id="backBtn" class="btn btn-sm btn-secondary">← Back to Tools</button>
+      <button id="resetBtn" class="btn btn-sm btn-danger">Reset Page</button>
+    </div>
+    <div id="tool-content"></div>
+  </div>
+
+  <footer class="mt-auto bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
