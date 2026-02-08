@@ -1,4 +1,4 @@
-# DayZ Labs – Offline Server Admin Tools
+# DayZ Offline Server Admin Tools
 
 An **all-in-one, fully offline** web-based tool suite for DayZ server administrators.  
 **DayZ Server Admin Tools** layout and functionality, with all processing done locally in your browser — **no PHP, no server, no internet required**.
